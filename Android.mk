@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),mido)
+LOCAL_PATH := $(call my-dir)
 
-include $(call all-subdir-makefiles)
+ifneq ($(filter TB8703N,$(TARGET_DEVICE)),)
 
-include $(CLEAR_VARS)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
 WCNSS_INI_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 $(WCNSS_INI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
