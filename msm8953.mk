@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/lenovo/msm8953/msm8953-common-vendor.mk)
+$(call inherit-product, vendor/lenovo/msm8953-common/msm8953-common-vendor.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
