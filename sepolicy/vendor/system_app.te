@@ -10,7 +10,6 @@ binder_call(system_app vold)
 allow system_app fm_radio_device:chr_file { ioctl open read };
 
 allow system_app {
-    kcal_dev
     sysfs_leds
 }:dir search;
 
